@@ -1,0 +1,24 @@
+{% load static %} <!--导入静态文件-->
+
+<head>
+    <link rel="stylesheet" href="https://cdn.acwing.com/static/jquery-ui-dist/jquery-ui.min.css"> 
+    <script src="https://cdn.acwing.com/static/jquery/js/jquery-3.3.1.min.js"></script> 
+    
+    <link rel="stylesheet" href="{% static 'css/algoend.css' %}"> 
+    <link rel="icon" href="https://duegin.gitee.io/pic/pictures/other/Rin.jpg"> <!--网站图标-->
+</head>
+
+
+<body style="margin: 0"> <!--页面内每个属性都有一个margin属性，相当于是边界外沿，默认不为零-->
+    <div id="algo_com_clock"></div>
+    <!--变成模块化-->
+    <script type="module"> 
+        import {Algo} from "{% static 'js/dist/algoend.js' %}"; 
+        $(document).ready(function() {
+            let algo = new Algo("algo_com_clock"); // js 渲染
+        });
+
+    </script>
+</body>
+
+

@@ -1,0 +1,42 @@
+
+.textshow{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.textshow-textinfo{
+    width: 0.9vw;
+    position: relative;
+    top: 5%;
+    left: 10%;
+    /* transform: translate(-50%, -50%); */
+    display: inline;
+}
+
+a{
+    text-decoration: none;
+}
+
+.textshow-info{
+    color: rgb(255, 255, 255);
+    font-family: Helvetica;
+    height: 20vh;
+    width: 36vw;
+    background-color: rgba(11, 86, 176, 0.6);
+    /* letter-spacing: 0.5vw; */
+    float: left;
+    margin-left: 20px;
+    margin-top: 22px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #3f3f3f;
+    transition: 500ms;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer; /*鼠标遇按钮变小手*/
+}
+
+.textshow-info:hover {
+    transform: scale(1.1);
+    transition: 500ms;
+}
