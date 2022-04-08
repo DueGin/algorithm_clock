@@ -9,9 +9,9 @@ class TextShow
 
         this.$info = $(`<div class="textshow-textinfo"></div>`);
 
-        this.get_info("atcoder");
-        this.get_info("nowcoder");
-        
+        this.get_info("AtCoder");
+        this.get_info("NowCoder");
+        this.get_info('CodeForces');
         this.end();
 
     }
@@ -31,17 +31,16 @@ class TextShow
             success : function(resp){
                 if(resp.result === "success")
                 {
-                    outer.show(resp);
+                    outer.show(resp, platform);
                 }
             }
         })
     }
 
-    show(resp){
-        let outer = this;
+    show(resp, platform){
         let info = resp.info;
         
-        let $info = $(`<div class="textshow-textinfo"></div>`);
+        let $info = $(`<div class="textshow-textinfo"><!--<div class="textshow-platform">${platform}</div>--></div>`);
 
         for(let i = 0; i < info.length; i++){
             let url = resp.info[i].url;
@@ -49,7 +48,7 @@ class TextShow
             let time =  resp.info[i].time;
             let $each_text = $(`
 <a href=${url} target="_blank">
-    <div  class="textshow-info" >
+    <div class="textshow-info" >
         <div class="textshow-info-name">${textname}</div>
         <div class="textshow-info-time">Time: ${time}</div>
     </div>
