@@ -66,7 +66,7 @@ class CF_Spider:
         self.tree = etree.HTML(page_text)
 
         exam_data = self.get_exam()
-        print(exam_data)
+        # print(exam_data)
         return exam_data
 
 if __name__ == '__main__':

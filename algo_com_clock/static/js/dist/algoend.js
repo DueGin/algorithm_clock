@@ -33,7 +33,7 @@ class TextShow
         let outer = this;
 
         $.ajax({
-            url : "http://154.86.27.91:8001/oj/get_info/",
+            url : "http://103.52.153.222:8001/oj/get_info/",
             type : "GET",
             data : {
                 'platform' : platform,
